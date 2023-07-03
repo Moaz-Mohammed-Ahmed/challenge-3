@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.contain {
+    display: grid;
+    grid-template-columns: repeat(2, 320px);
+    grid-template-rows: 200px 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contain .join {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: 1 / 1 / 1 / span 2;
+    padding: 30px;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.contain .join h3 {
+    color: hsl(179, 61%, 44%);
+    padding-bottom: 30px;
+    font-size: 24px;
+}
+
+.contain .join h4 {
+    color: hsl(71, 73%, 54%);
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.contain .join p {
+    font-size: 16px;
+    opacity: 50%;
+    line-height: 1.6;
+}
+
+.contain .subscription {
+    background-color: hsl(179, 61%, 44%);
+    padding: 30px;
+    border-radius: 0 0 0 0.5rem;
+    position: relative;
+}
+
+.contain .subscription h4 {
+    color: white;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.contain .subscription span.price {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contain .subscription span.duration {
+    color: white;
+    opacity: 75%;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+}
+
+.contain .subscription p {
+    color: white;
+    padding: 5px;
+}
+
+.contain .subscription button {
+    border: none;
+    color: white;
+    font-size: 16px;
+    background-color: hsl(71, 73%, 54%);
+    padding: 15px 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 155px;
+    cursor: pointer;
+}
+
+.contain .why-us {
+    background-color: hsl(179, 47%, 52%);
+    padding: 30px;
+    border-radius: 0 0 0.5rem 0;
+}
+
+.contain .why-us h4 {
+    color: white;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+
+.contain .why-us p {
+    color: white;
+    opacity: 50%;
+    line-height: 1.8;
+}
+
+@media (min-width:0px) and (max-width:800px) {
+    .contain {
+        grid-template-columns: 320px;
+        grid-template-rows: repeat(3, 250px);
+    }
+    .contain .join {
+        grid-area: 1/1/1/1;
+    }
+    .contain .subscription {
+        border-radius: 0 0 0 0;
+    }
+    .contain .why-us {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
